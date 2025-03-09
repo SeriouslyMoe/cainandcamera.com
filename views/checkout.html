@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="/css/output.css" rel="stylesheet">
+  <title>Checkout - Cairn & Camera</title>
+</head>
+<body class="font-sans bg-white">
+
+<!-- Navigation Header -->
+<header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Logo and Company Name -->
+    <div class="flex items-center">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADJElEQVR4nO2azU4UQRDHf3hw9aDBRNGbPIyBmGgk2QvCMxgIb4F4YN1V1+hTqBvlBcQQz7osnAQvRj2DgG06qUk643x0dfesH6GSSvZjprt/+6/qru5ZOLX/1y4Bc8AaMACGwHfgUNy+/ijf2WvuAJP8JdYCFoEN4BgwSrf3vAYWpK2x23lgBfgcMPjMd4ET5/0+sAycGxfETWA3AiBza1MFn+8As00C2F/qsdOhzYE20I8AoeL7XhPhdhV4n+uoC0yI9xsAMcCWqJbEpkXuoo4eRsD4gBhgJGOIsisSQlUdPXVgeg2AGMnJazE5kQ+nMu8EKKMBMRJmQTnzRBkqWmW0IEbyUj3FapNXq0wIiAFmfCGsfNuBIEYAfJQJBdnxXTRXIiA0ymhBus7Es+Sjxn4CEB9lNCB9aact7/fqEn8xEYSPMr4gHacNdwK6WwWykRikShkfkH6FqnY7ULqfOJaKNFlZkDNXmTqQTokSmR8BF4s6mZML3jYE4cL0akD6njPfraIOHiQMIx+YMpCOYi26X9T4IBLiGXBGrU+YEkb8RVGDozEoUQUSUq/ZdeU3+zZmJVwQV4lHir6/FDV4GKFEqBoEKmHED1KAuBB2MKEWs8s8iA2tLJwyCBMJogknUxda24FKZJ+HQoQeXhg58AuafouUCAWJUcJUTb9rgUrkQSbGoIQRX60qUbRK5EGeR07HPrZZVaJMlpzf1imRB3HvacKmpLD9UVY0WnsToEQRiHGUsfeuJwgjk/NXVbQLAUqUgYS0YRQ+77vVbSsHUATSlDJ7wNm6GFx2CrKuovEykCaUuVcHkalSd0yqBUmpzEhz4jjbAEgKZX4CN1BarwGQvDJamHUCrCUHx6lBQpV555PgZXZZkS8aEK0yu/KwKcqmPbfBWpC8MvahUdE1tiq/TsKyYKsBkDxMtyCc7MOmpNaqWVdCQTIYuwAPndmpE5MTPjZTEmpTESCuD0Om2Bh1lqRUyAZw4pTXIf5JVuw/8g+IlpyKD+QsVjv4I6li55sOI43ZvcFtOcZ8Kfvpr86fauzrD7I9XZVN0QVVD6fGv2O/AECk0UkivM8FAAAAAElFTkSuQmCC" alt="Logo" class="h-8">
+      <a href="../" class="ml-4 text-2xl font-bold font-serif">Cairn & Camera</span>
+    </div>
+
+    <!-- Mobile Menu Button (Dropdown Icon) -->
+    <div class="flex items-center md:hidden">
+      <!-- Mail Icon for Contact Us -->
+      <a href="#" class="text-gray-700 hover:text-amber-400">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      </a>
+      <!-- Dropdown Icon (Hamburger Menu) -->
+      <button id="mobile-menu-button" class="ml-4 text-gray-700 hover:text-blue-500 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden md:flex items-center space-x-6">
+      <a href="/" class="text-gray-700 hover:text-red-700 font-serif">HOME</a>
+      <a href="/about/" class="text-gray-700 hover:text-red-700 font-serif">ABOUT</a>
+      <a href="/services/" class="text-gray-700 hover:text-red-700 font-serif">SERVICES</a>
+      <a href="#" class="text-gray-700 hover:text-red-700 font-serif">BLOG</a>
+      <a href="#" class="text-gray-700 hover:text-red-700 font-serif">CAREERS</a>
+      <a href="#" class="text-gray-700 hover:text-red-700 font-serif">FAQ</a>
+      <button class="bg-white text-amber-400 border border-amber-400 px-4 py-2 hover:bg-black hover:text-amber-400 hover:border-red-700 transition duration-300">
+        CONTACT US
+      </button>
+    </nav>
+  </div>
+
+  <!-- Mobile Navigation Links (Dropdown) -->
+  <div id="mobile-menu" class="md:hidden bg-white transform transition-all duration-300 ease-in-out max-h-0 overflow-hidden">
+    <div class="px-6 py-4 space-y-4">
+      <a href="/" class="block text-gray-700 hover:text-red-700">HOME</a>
+      <a href="/about/" class="block text-gray-700 hover:text-red-700">ABOUT</a>
+      <a href="/services/" class="block text-gray-700 hover:text-red-700">SERVICES</a>
+      <a href="#" class="block text-gray-700 hover:text-red-700">BLOG</a>
+      <a href="#" class="block text-gray-700 hover:text-red-700">CAREERS</a>
+      <a href="#" class="block text-gray-700 hover:text-red-700">FAQ</a>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="pt-24 container mx-auto px-6">
+  <h1 class="text-4xl font-bold font-serif text-center mb-8">Checkout</h1>
+  <!-- Responsive container: mobile (flex-col) vs desktop (flex-row) -->
+  <div class="flex flex-col md:flex-row gap-6">
+    <!-- Shipping Information Form (Mobile: below; Desktop: left) -->
+    <div class="order-2 md:order-1 md:w-1/2">
+      <h2 class="text-2xl font-bold font-serif mb-4 text-center md:text-left">Shipping Information</h2>
+      <form class="space-y-4">
+        <div>
+          <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
+          <input type="text" id="firstName" name="firstName" placeholder="John" class="mt-1 block w-full border border-gray-300 p-2" />
+        </div>
+        <div>
+          <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name</label>
+          <input type="text" id="lastName" name="lastName" placeholder="Doe" class="mt-1 block w-full border border-gray-300 p-2" />
+        </div>
+        <div>
+          <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+          <input type="text" id="address" name="address" placeholder="123 Main St" class="mt-1 block w-full border border-gray-300 p-2" />
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <div class="w-full sm:w-1/2">
+            <label for="state" class="block text-sm font-medium text-gray-700">State</label>
+            <input type="text" id="state" name="state" placeholder="CA" class="mt-1 block w-full border border-gray-300 p-2" />
+          </div>
+          <div class="w-full sm:w-1/2">
+            <label for="zip" class="block text-sm font-medium text-gray-700">Zip Code</label>
+            <input type="text" id="zip" name="zip" placeholder="90210" class="mt-1 block w-full border border-gray-300 p-2" />
+          </div>
+        </div>
+        <a href="https://www.paypal.com/" class="inline-block text-center w-full bg-white text-amber-400 border border-amber-400 px-4 py-2 hover:bg-black hover:text-amber-400 hover:border-red-700 transition duration-300">
+          Proceed to Payment
+        </a>
+      </form>
+    </div>
+    <!-- Cart Section (Mobile: first; Desktop: right) -->
+    <div class="order-1 md:order-2 md:w-1/2">
+      <div class="bg-gray-200 p-6 rounded-sm">
+        <h2 class="text-2xl font-bold font-serif mb-4 text-center md:text-left">Your Cart</h2>
+        <!-- Hidden cart count element for compatibility with cart.js -->
+        <div id="cart-count" class="hidden"></div>
+        <div id="cart-items" class="space-y-6">
+          <!-- Cart items will be populated here by cart.js -->
+        </div>
+        <div class="mt-8 text-right">
+          <p class="text-lg font-bold">Total: $<span id="cart-total">0.00</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  // Toggle mobile menu with animation
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton.addEventListener('click', () => {
+    // Toggle the max-height and overflow classes
+    if (mobileMenu.classList.contains('max-h-0')) {
+      mobileMenu.classList.remove('max-h-0');
+      mobileMenu.classList.add('max-h-96'); // Adjust this value based on your content height
+    } else {
+      mobileMenu.classList.remove('max-h-96');
+      mobileMenu.classList.add('max-h-0');
+    }
+  });
+</script>
+
+<!-- Link to cart.js -->
+<script src="/js/cart.js"></script>
+</body>
+</html>
