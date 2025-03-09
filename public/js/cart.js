@@ -57,9 +57,10 @@ const updateCartUI = (cart) => {
           <p class="font-bold">${item.name}</p>
           <p class="text-sm text-gray-600">$${item.price} x ${item.quantity}</p>
         </div>
-        <button onclick="removeFromCart('${item.id}')" class="text-red-500 hover:text-red-700">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        <button onclick="removeFromCart('${item.id}')" class="text-red-500 hover:text-red-700 p-2" title="Remove item" aria-label="Remove item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" style="stroke: red; stroke-width: 2px;" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+            <line x1="18" y1="6" x2="6" y2="18"></line>
           </svg>
         </button>
       </div>
