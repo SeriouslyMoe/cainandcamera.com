@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="/css/output.css" rel="stylesheet">
+  <title>Cairn & Camera</title>
+</head>
+<body class="font-sans bg-white">
+
+<!-- Navigation Header -->
+<header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo and Company Name -->
+      <div class="flex items-center">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADJElEQVR4nO2azU4UQRDHf3hw9aDBRNGbPIyBmGgk2QvCMxgIb4F4YN1V1+hTqBvlBcQQz7osnAQvRj2DgG06qUk643x0dfesH6GSSvZjprt/+6/qru5ZOLX/1y4Bc8AaMACGwHfgUNy+/ijf2WvuAJP8JdYCFoEN4BgwSrf3vAYWpK2x23lgBfgcMPjMN4ET5/0+sAycGxfETWA3AiBza1MFn+8As00C2F/qsdOhzYE20I8AoeL7XhPhdhV4n+uoC0yI9xsAMcCWqJbEpkXuoo4eRsD4gBhgJGOIsisSQlUdPXVgeg2AGMnJazE5kQ+nMu8EKKMBMRJmQTnzRBkqWmW0IEbyUj3FapNXq0wIiAFmfCGsfNuBIEYAfJQJBdnxXTRXIiA0ymhBus7Es+Sjxn4CEB9lNCB9aact7/fqEn8xEYSPMr4gHacNdwK6WwWykRikShkfkH6FqnY7ULqfOJaKNFlZkDNXmTqQTokSmR8BF4s6mZML3jYE4cL0akD6njPfraIOHiQMIx+YMpCOYi26X9T4IBLiGXBGrU+YEkb8RVGDozEoUQUSUq/ZdeU3+zZmJVwQV4lHir6/FDV4GKFEqBoEKmHED1KAuBB2MKEWs8s8iA2tLJwyCBMJogknUxda24FKZJ+HQoQeXhg58AuafouUCAWJUcJUTb9rgUrkQSbGoIQRX60qUbRK5EGeR07HPrZZVaJMlpzf1imRB3HvacKmpLD9UVY0WnsToEQRiHGUsfeuJwgjk/NXVbQLAUqUgYS0YRQ+77vVbSsHUATSlDJ7wNm6GFx2CrKuovEykCaUuVcHkalSd0yqBUmpzEhz4jjbAEgKZX4CN1BarwGQvDJamHUCrCUHx6lBQpV555PgZXZZkS8aEK0yu/KwKcqmPbfBWpC8MvahUdE1tiq/TsKyYKsBkDxMtyCc7MOmpNaqWVdCQTIYuwAPndmpE5MTPjZTEmpTESCuD0Om2Bh1lqRUyAZw4pTXIf5JVuw/8g+IlpyKD+QsVjv4I6li55sOI43ZvcFtOcZ8Kfvpr86fauzrD7I9XZVN0QVVD6fGv2O/AECk0UkivM8FAAAAAElFTkSuQmCC" alt="Logo" class="h-8">
+        <a href="/" class="ml-4 text-2xl font-bold font-serif">Cairn & Camera</span>
+      </div>
+  
+      <!-- Mobile Menu Button (Dropdown Icon) -->
+      <div class="flex items-center md:hidden">
+        <!-- Mail Icon for Contact Us -->
+        <a href="#" class="text-gray-700 hover:text-amber-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </a>
+        <!-- Dropdown Icon (Hamburger Menu) -->
+        <button id="mobile-menu-button" class="ml-4 text-gray-700 hover:text-blue-500 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+  
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-6">
+        <a href="#" class="text-gray-700 hover:text-red-700 font-serif">HOME</a>
+        <a href="/about/" class="text-gray-700 hover:text-red-700 font-serif">ABOUT</a>
+        <a href="/services/" class="text-gray-700 hover:text-red-700 font-serif">SERVICES</a>
+        <a href="#" class="text-gray-700 hover:text-red-700 font-serif">CAREERS</a>
+        <a href="#" class="text-gray-700 hover:text-red-700 font-serif">NEWS</a>
+        <a href="#" class="text-gray-700 hover:text-red-700 font-serif">FAQ</a>
+        <button class="bg-white text-amber-400 border border-amber-400 px-4 py-2 hover:bg-black hover:text-amber-400 hover:border-red-700 transition duration-300">
+          CONTACT US
+        </button>
+      </nav>
+    </div>
+  
+    <!-- Mobile Navigation Links (Dropdown) -->
+    <div id="mobile-menu" class="md:hidden bg-white transform transition-all duration-300 ease-in-out max-h-0 overflow-hidden">
+      <div class="px-6 py-4 space-y-4">
+        <a href="#" class="block text-gray-700 hover:text-red-700">HOME</a>
+        <a href="/about/" class="block text-gray-700 hover:text-red-700">ABOUT</a>
+        <a href="/services/" class="block text-gray-700 hover:text-red-700">SERVICES</a>
+        <a href="#" class="block text-gray-700 hover:text-red-700">CAREERS</a>
+        <a href="#" class="block text-gray-700 hover:text-red-700">NEWS</a>
+        <a href="#" class="block text-gray-700 hover:text-red-700">FAQ</a>
+      </div>
+    </div>
+  </header>
+
+<!-- Gallery Section -->
+<section class="relative w-full h-[40vh] md:h-[80vh] overflow-hidden group mt-16">
+  <!-- Gallery Container -->
+  <div id="gallery" class="flex transition-transform duration-500 ease-in-out w-full h-full">
+    <!-- Gallery Images -->
+    <div class="w-full h-full flex-shrink-0">
+      <img src="/images/gallery1.jpg" alt="Gallery Image 1" class="w-full h-full object-cover">
+    </div>
+    <div class="w-full h-full flex-shrink-0">
+      <img src="/images/gallery2.jpg" alt="Gallery Image 2" class="w-full h-full object-cover">
+    </div>
+    <div class="w-full h-full flex-shrink-0">
+      <img src="/images/gallery3.jpg" alt="Gallery Image 3" class="w-full h-full object-cover">
+    </div>
+    <div class="w-full h-full flex-shrink-0">
+      <img src="/images/gallery4.jpg" alt="Gallery Image 4" class="w-full h-full object-cover">
+    </div>
+  </div>
+
+  <!-- Left Arrow with Shadow -->
+  <a href="#" id="prev-button" class="absolute top-0 left-0 h-full w-1/6 flex items-center justify-center z-10">
+    <!-- Shadow -->
+    <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+    <!-- Arrow Icon -->
+    <span class="text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">⇦</span>
+  </a>
+
+  <!-- Right Arrow with Shadow -->
+  <a href="#" id="next-button" class="absolute top-0 right-0 h-full w-1/6 flex items-center justify-center z-10">
+    <!-- Shadow -->
+    <div class="absolute inset-0 bg-gradient-to-l from-black to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+    <!-- Arrow Icon -->
+    <span class="text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">⇨</span>
+  </a>
+</section>
+
+  <!-- About and Blog Section -->
+  <section class="container mx-auto px-6 mt-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- About Section -->
+      <div>
+        <img src="/images/about.jpg" alt="About Us" class="w-full h-64 object-cover rounded-lg">
+        <div class="mt-4">
+          <h2 class="text-xl font-semibold">About Us</h2>
+          <p class="mt-2 text-gray-600">We are a company dedicated to providing the best services to our clients. Learn more about our mission and values.</p>
+          <!-- Updated Button -->
+          <a href="/about/" class="mt-4 inline-block bg-white text-amber-400 border border-amber-400 px-4 py-2 hover:bg-black hover:text-amber-400 hover:border-red-700 transition duration-300">
+          Read More
+          </a>
+        </div>
+      </div>
+      <!-- Blog Section -->
+      <div>
+        <div class="space-y-6">
+          <!-- Blog Post 1 -->
+          <div class="flex items-center space-x-4">
+            <img src="/images/blog1.jpg" alt="Blog Post 1" class="w-24 h-24 object-cover rounded-lg">
+            <div>
+              <span class="text-sm text-gray-500">October 10, 2023</span>
+              <h3 class="text-lg font-semibold">Blog Post Title 1</h3>
+              <p class="text-sm text-gray-600">A brief description of the blog post content.</p>
+              <a href="#" class="mt-2 inline-block text-amber-400 hover:underline">Read More →</a>
+            </div>
+          </div>
+          <!-- Blog Post 2 -->
+          <div class="flex items-center space-x-4">
+            <img src="/images/blog2.jpg" alt="Blog Post 2" class="w-24 h-24 object-cover rounded-lg">
+            <div>
+              <span class="text-sm text-gray-500">October 5, 2023</span>
+              <h3 class="text-lg font-semibold">Blog Post Title 2</h3>
+              <p class="text-sm text-gray-600">A brief description of the blog post content.</p>
+              <a href="#" class="mt-2 inline-block text-amber-400 hover:underline">Read More →</a>
+            </div>
+          </div>
+          <!-- Blog Post 1 -->
+          <div class="flex items-center space-x-4">
+            <img src="/images/blog3.jpg" alt="Blog Post 3" class="w-24 h-24 object-cover rounded-lg">
+            <div>
+              <span class="text-sm text-gray-500">October 1, 2023</span>
+              <h3 class="text-lg font-semibold">Blog Post Title 3</h3>
+              <p class="text-sm text-gray-600">A brief description of the blog post content.</p>
+              <a href="#" class="mt-2 inline-block text-amber-400 hover:underline">Read More →</a>
+            </div>
+          </div>
+          <!-- Repeat for Blog Post 2 and 3 -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Campaign Section -->
+  <section class="container mx-auto px-6 xl:px-48 mt-12">
+    <h2 class="text-3xl font-medium font-serif text-center">CAMPAIGN</h2>
+    <p class="text-center text-gray-600">Information on special campaigns.</p>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <img src="/images/campaign.jpg" alt="Campaign" class="w-full h-auto rounded-lg">
+      <div class="col-span-2">
+        <a href="#" class="text-2xl text-red-700 hover:text-red-500 font-semibold">
+          Supporting the Next Generation of Creators
+        </a>
+        <p class="mt-4 text-gray-600 text-justify xl:leading-loose">
+          At Cairn & Camera, we believe in nurturing creativity and empowering young minds. That's
+          why we're proud to announce our initiative to raise donations for local schools,
+          providing much-needed camera equipment for their student body. These tools will not only
+          enhance photography and art classes but also support extracurricular activities like the
+          yearbook club, helping students capture and preserve their school memories.
+        </p>
+        <p class="mt-4 text-gray-600 text-justify xl:leading-loose">
+          Your contributions will directly fund high-quality cameras, lenses, and editing software,
+          ensuring students have access to the resources they need to explore their passions and
+          develop valuable skills. Together, we can inspire the next generation of photographers,
+          storytellers, and artists. Join us in making a difference—one snapshot at a time.
+        </p>
+        <div class="flex justify-end">
+          <a href="#" class="mt-4 inline-block bg-white text-amber-400 border border-amber-400 px-4 py-2 hover:bg-black hover:text-amber-400 hover:border-red-700 transition duration-300">
+            Details
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plan Section -->
+  <section class="container mx-auto px-6 mt-12">
+    <h2 class="text-3xl font-medium font-serif text-center">PLAN</h2>
+    <p class="text-center text-gray-600">Your next vacation</p>
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <!-- Plan 1 -->
+      <div>
+        <img src="/images/plan1.jpg" alt="Plan 1" class="w-full h-auto rounded-lg">
+        <p class="mt-2 font-bold text-center">753</p>
+      </div>
+      <!-- Plan 2 -->
+      <div>
+        <img src="/images/plan2.jpg" alt="Plan 2" class="w-full h-auto rounded-lg">
+        <p class="mt-2 font-bold text-center">Hatsumiya</p>
+      </div>
+      <!-- Plan 3 -->
+      <div>
+        <img src="/images/plan3.jpg" alt="Plan 3" class="w-full h-auto rounded-lg">
+        <p class="mt-2 font-bold text-center">20th</p>
+      </div>
+      <!-- Plan 4 -->
+      <div>
+        <img src="/images/plan4.jpg" alt="Plan 4" class="w-full h-auto rounded-lg">
+        <p class="mt-2 font-bold text-center">Graduation</p>
+      </div>
+      <!-- Plan 5 -->
+      <div>
+        <img src="/images/plan5.jpg" alt="Plan 5" class="w-full h-auto rounded-lg">
+        <p class="mt-2 font-bold text-center">ID Photo</p>
+      </div>
+      <!-- Plan 6 -->
+      <div>
+        <img src="/images/plan6.jpg" alt="Plan 6" class="w-full h-auto rounded-lg">
+        <p class="mt-2 font-bold text-center">Profile Picture</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact and Share Section -->
+  <section class="container mx-auto px-6 mt-12">
+    <div class="flex justify-between items-center">
+      <button class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Contact Us</button>
+      <div class="flex space-x-4">
+        <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABJElEQVR4nO2ZTUoDQRBG31LiDbIQ4g3EY2RCQMHzSCTgTXIBN1locops3QVc6gxusigRsjEk0z2TGfuH70Ftu+p1dTUzNAgh2jIF1kAFWOCogBUwaSrxHEHxdiLmTTphkUfhI7KOoFBzxJuPSBlBoeaILx8RSySchC7QJHJA6J02deSA/9jN35txBtwAl8AAGAEPwDKVjrwD1x3U4KRPiR1w6y6B6EUWPgWQgMhdLiJXR/LdAxvgu+FaQUUujuT7aLlWUJEu8zmRCBl3pA3DXEQmuYg85iLykovINkYRn+S9bZJJBHXEdLRq0IygGUEzUodmBM0IvcxImcAnyqePyCoBkdcu/9BCiozxZN7z7XVOPNGQYv96GsPjaLk/Tt6dEELwhx+snvc1Sojn9AAAAABJRU5ErkJggg==" alt="Facebook" class="h-8"></a>
+        <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACvElEQVR4nO2ZTWsUQRCGn0P04pLE+3oQs1nBi/h1EPVg9GziX1GTP6CoR2MOGvHjP4gRsxtJBH+Cq7nHk27EGIyXtaWgGoaB+ejpWbsX9oUX9jBVXe9OVXVNN4wxRhRoA0tAF/gM7AOmJoov8dkBFnWt2nEO2Kgx6LL8CFysQ8AhYAX4G0CEUcraj4GJqiKOAu8DCjApbmhMzm8iRCqZAn4ADrsIWYkgaJPBZZfCDlkTpoAS29kyQmJMKZOitOhctAMH+AZoKtcKnm3lCVkKLKSZiOVYwbN38oR0RkjIep6Q7RqC6QPPgRuaqkeU8nseeAHsZtiuqQDh24J1vuQJ2fMQ8Bu4C0xSjCngntpUXW8vb4GqTndSLfE68Ez/tf3EQLgKXEu1+h2PdTNRVYTN7Vlgq4TNZqLrND3EZKJKOtk3cSUn97Nq6bLangcOQgqRmrBvwkVEUsyM+ngQSkhfi5aS6ZRFmbAF0xX+jFqESIu1hW08Oae+XoYQIvsE2p18hTxVXwshhEhdoC3WV4i0ZkE7hJCG2vyqQYj4EDRGXchP9TU56qnVC5la82qzWoOQJ+rrZgghMsWis5OvkKvq61XoDXHTQ4R8WtsN8UcIIUZHccFx4JvniPKwgn1tQg50FEcHwL6D7XfgktpeCD00mtQYP1PydFLS6YTayNfg14prZ8J4iJFR3GJOx46e7jPCT9qdbGHbN1FVhBnWp66kxn0t2iJMa038Gdan7raHY8tdnWJlADypE0BDfy9oi3XtTsb18CH0cZBx4Ls8IYsRBGhK8laekFYEARrHWS8T3QiCND6njBangUEEwZoMDspeK6B3diZSPsIBE5Gm2Jbr1Rt68RjTpU+35Gab+WaWA1/FDTSdKl9PJ3EKeB1ARAc4wxDQ0puidT3CqePgwVJ89XTHvl10tTbGGPwf/APThWw4L8JxcwAAAABJRU5ErkJggg==" alt="Instagram" class="h-8"></a>
+      </div>
+    </div>
+  </section>
+
+<!-- Floating Cart Button -->
+<div class="fixed bottom-4 right-4 z-50">
+  <button id="cart-button" class="bg-red-700 text-white px-6 py-3 rounded-full shadow-lg hover:bg-amber-400 transition duration-300 flex items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+    </svg>
+    <span id="cart-count" class="ml-2">0</span>
+  </button>
+</div>
+
+<!-- Cart Modal -->
+<div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+  <div class="bg-white w-96 h-full p-6 overflow-y-auto ml-auto">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-xl font-bold font-serif">Your Cart</h2>
+      <button id="close-cart-button" class="text-gray-500 hover:text-gray-700">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <div id="cart-items" class="space-y-4">
+      <!-- Cart items will be dynamically added here -->
+    </div>
+    <div class="mt-6">
+      <p class="text-lg font-bold">Total: $<span id="cart-total">0.00</span></p>
+      <a href="/checkout" class="mt-4 w-full bg-white text-amber-400 border border-amber-400 px-4 py-2 hover:bg-black hover:text-amber-400 hover:border-red-700 transition duration-300 text-center block">
+        Checkout
+      </a>
+      <p class="text-xs italic text-gray-600 mt-2 text-center">Click the red "x" button twice to remove a listing.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Sliding Gallery Functionality
+  const gallery = document.getElementById('gallery');
+  const prevButton = document.getElementById('prev-button');
+  const nextButton = document.getElementById('next-button');
+  let currentIndex = 0;
+
+  // Function to update the gallery position
+  const updateGallery = () => {
+    gallery.style.transform = `translateX(-${currentIndex * 100}%)`;
+  };
+
+  // Next Button Click
+  nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % 4; // 4 is the number of images
+    updateGallery();
+  });
+
+  // Previous Button Click
+  prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + 4) % 4; // 4 is the number of images
+    updateGallery();
+  });
+  
+  // Auto Slide (Optional)
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % 4;
+    updateGallery();
+  }, 5000); // Change slide every 5 seconds
+</script>
+
+<script>
+  // Toggle mobile menu with animation
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton.addEventListener('click', () => {
+    // Toggle the max-height and overflow classes
+    if (mobileMenu.classList.contains('max-h-0')) {
+      mobileMenu.classList.remove('max-h-0');
+      mobileMenu.classList.add('max-h-96'); // Adjust this value based on your content height
+    } else {
+      mobileMenu.classList.remove('max-h-96');
+      mobileMenu.classList.add('max-h-0');
+    }
+  });
+</script>
+
+<!-- Link to cart.js -->
+<script src="/js/cart.js"></script>
+</body>
+</html>
+</body>
+</html>
