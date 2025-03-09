@@ -8,6 +8,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   <link href="/css/output.css" rel="stylesheet">
   <title>Checkout - Cairn & Camera</title>
+  <style>
+    /* Initially hidden objects */
+    #overlay {
+      display: none;
+    }
+  </style>
 </head>
 <body class="font-sans bg-white">
 
@@ -70,8 +76,8 @@
   <div class="flex flex-col md:flex-row gap-6">
     <!-- Shipping Information Form (Mobile: below; Desktop: left) -->
     <div class="order-2 md:order-1 md:w-1/2">
-      <h2 class="text-2xl font-bold font-serif mb-4 text-center md:text-left">Shipping Information</h2>
       <form class="space-y-4">
+        <h2 class="text-2xl font-bold font-serif mb-4 text-center md:text-left">Shipping Information</h2>
         <div>
           <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
           <input type="text" id="firstName" name="firstName" placeholder="John" class="mt-1 block w-full border border-gray-300 p-2" />
@@ -94,9 +100,66 @@
             <input type="text" id="zip" name="zip" placeholder="90210" class="mt-1 block w-full border border-gray-300 p-2" />
           </div>
         </div>
-        <a href="https://www.paypal.com/" class="inline-block text-center w-full bg-white text-amber-400 border border-amber-400 px-4 py-2 hover:bg-black hover:text-amber-400 hover:border-red-700 transition duration-300">
-          Proceed to Payment
-        </a>
+        <h2 class="text-2xl font-bold font-serif mb-4 text-center md:text-left">Billing Information</h2>
+        <div id="billing-info" class="space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="billingFirstName" class="block text-sm font-medium text-gray-700">Billing First Name</label>
+              <input type="text" id="billingFirstName" name="billingFirstName" placeholder="John" class="mt-1 block w-full border border-gray-300 p-2" />
+            </div>
+            <div>
+              <label for="billingLastName" class="block text-sm font-medium text-gray-700">Billing Last Name</label>
+              <input type="text" id="billingLastName" name="billingLastName" placeholder="Doe" class="mt-1 block w-full border border-gray-300 p-2" />
+            </div>
+          </div>
+          <div>
+            <label for="billingAddress" class="block text-sm font-medium text-gray-700">Billing Address</label>
+            <input type="text" id="billingAddress" name="billingAddress" placeholder="123 Main St" class="mt-1 block w-full border border-gray-300 p-2" />
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <div class="w-full sm:w-1/2">
+              <label for="billingState" class="block text-sm font-medium text-gray-700">Billing State</label>
+              <input type="text" id="billingState" name="billingState" placeholder="CA" class="mt-1 block w-full border border-gray-300 p-2" />
+            </div>
+            <div class="w-full sm:w-1/2">
+              <label for="billingZip" class="block text-sm font-medium text-gray-700">Billing Zip Code</label>
+              <input type="text" id="billingZip" name="billingZip" placeholder="90210" class="mt-1 block w-full border border-gray-300 p-2" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <label class="inline-flex items-center">
+            <input type="checkbox" id="sameAsShipping" class="form-checkbox">
+            <span class="ml-2 text-gray-700">Billing information is the same as shipping address</span>
+          </label>
+        </div>
+        <h2 class="text-2xl font-bold font-serif mb-4 text-center md:text-left">Payment Information</h2>
+        <!-- New Credit Card Fields -->
+        <div>
+          <label for="cardNumber" class="block text-sm font-medium text-gray-700">Credit Card Number</label>
+          <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" class="mt-1 block w-full border border-gray-300 p-2" />
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <div class="w-full sm:w-1/2">
+            <label for="expiration" class="block text-sm font-medium text-gray-700">Expiration</label>
+            <input type="text" id="expiration" name="expiration" placeholder="MM/YY" class="mt-1 block w-full border border-gray-300 p-2" />
+          </div>
+          <div class="w-full sm:w-1/2">
+            <label for="cvv" class="block text-sm font-medium text-gray-700">CVV</label>
+            <input type="text" id="cvv" name="cvv" placeholder="123" class="mt-1 block w-full border border-gray-300 p-2" />
+          </div>
+        </div>
+        <div>
+          <label class="inline-flex items-center">
+            <input type="checkbox" class="form-checkbox">
+            <span class="ml-2 text-gray-700">I agree to the <a href="/privacy-policy" class="underline hover:text-blue-500">Privacy Policy</a>.</span>
+          </label>
+        </div>
+        <div>
+          <button id="actionButton" type="button" class="w-full bg-white text-amber-400 border border-amber-400 px-4 py-2 hover:bg-black hover:text-amber-400 hover:border-red-700 transition duration-300">
+            Confirm Order
+          </button>
+        </div>
       </form>
     </div>
     <!-- Cart Section (Mobile: first; Desktop: right) -->
@@ -116,6 +179,16 @@
   </div>
 </main>
 
+<div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+  <div class="bg-white p-8 rounded-md shadow-lg text-center">
+    <h2 class="text-xl font-bold font-serif mb-4">Order Confirmed</h2>
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+    </svg>
+    <p class="text-gray-700">You will be redirected shortly...</p>
+  </div>
+</div>
+
 <script>
   // Toggle mobile menu with animation
   const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -130,6 +203,30 @@
       mobileMenu.classList.remove('max-h-96');
       mobileMenu.classList.add('max-h-0');
     }
+  });
+</script>
+
+<script>
+  document.getElementById('sameAsShipping').addEventListener('change', function(){
+    const billingInfo = document.getElementById('billing-info');
+    if (this.checked) {
+      billingInfo.style.display = 'none';
+    } else {
+      billingInfo.style.display = 'block';
+    }
+  });
+</script>
+
+<script>
+  document.getElementById('actionButton').addEventListener('click', function() {
+    // Show the overlay to dim the page and display the floating message
+    const overlay = document.getElementById('overlay');
+    overlay.style.display = 'flex';
+    
+    // After 5 seconds, redirect to another page (change URL as needed)
+    setTimeout(function() {
+      window.location.href = '/';
+    }, 5000);
   });
 </script>
 

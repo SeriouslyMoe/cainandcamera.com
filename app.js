@@ -83,6 +83,14 @@ app.get('/checkout/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'checkout.html'));
 });
 
+app.get('/contact-us/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'contact-us.html'));
+});
+
+app.get('/privacy-policy/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'privacy-policy.html'));
+});
+
 app.get('/services/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'services.html'));
 });
