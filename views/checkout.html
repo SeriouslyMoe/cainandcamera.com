@@ -70,14 +70,14 @@
 </header>
 
 <!-- Main Content -->
-<main class="pt-24 container mx-auto px-6">
-  <h1 class="text-4xl font-bold font-serif text-center mb-8">Checkout</h1>
+<main class="py-24 container mx-auto px-6">
+  <h1 class="text-4xl font-medium font-serif text-center mb-8">CHECKOUT</h1>
   <!-- Responsive container: mobile (flex-col) vs desktop (flex-row) -->
   <div class="flex flex-col md:flex-row gap-6">
     <!-- Shipping Information Form (Mobile: below; Desktop: left) -->
     <div class="order-2 md:order-1 md:w-1/2">
       <form class="space-y-4">
-        <h2 class="text-2xl font-bold font-serif mb-4 text-center md:text-left">Shipping Information</h2>
+        <h2 class="text-2xl font-medium font-serif mb-4 text-center md:text-left">Shipping Information</h2>
         <div>
           <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
           <input type="text" id="firstName" name="firstName" placeholder="John" class="mt-1 block w-full border border-gray-300 p-2" />
@@ -100,7 +100,7 @@
             <input type="text" id="zip" name="zip" placeholder="90210" class="mt-1 block w-full border border-gray-300 p-2" />
           </div>
         </div>
-        <h2 class="text-2xl font-bold font-serif mb-4 text-center md:text-left">Billing Information</h2>
+        <h2 class="text-2xl font-medium font-serif mb-4 text-center md:text-left">Billing Information</h2>
         <div id="billing-info" class="space-y-4">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -133,7 +133,7 @@
             <span class="ml-2 text-gray-700">Billing information is the same as shipping address</span>
           </label>
         </div>
-        <h2 class="text-2xl font-bold font-serif mb-4 text-center md:text-left">Payment Information</h2>
+        <h2 class="text-2xl font-medium font-serif mb-4 text-center md:text-left">Payment Information</h2>
         <!-- New Credit Card Fields -->
         <div>
           <label for="cardNumber" class="block text-sm font-medium text-gray-700">Credit Card Number</label>
@@ -165,7 +165,7 @@
     <!-- Cart Section (Mobile: first; Desktop: right) -->
     <div class="order-1 md:order-2 md:w-1/2">
       <div class="bg-gray-200 p-6 rounded-sm">
-        <h2 class="text-2xl font-bold font-serif mb-4 text-center md:text-left">Your Cart</h2>
+        <h2 class="text-2xl font-medium font-serif mb-4 text-center md:text-left">Your Cart</h2>
         <!-- Hidden cart count element for compatibility with cart.js -->
         <div id="cart-count" class="hidden"></div>
         <div id="cart-items" class="space-y-6">
