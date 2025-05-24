@@ -13,6 +13,7 @@ const generateSecretKey = () => {
 };
 
 const galleryDir = path.join(__dirname, 'public/images/dynamic');
+const ordersDir = path.join(__dirname, 'public/images/orders');
 
 // Middleware to parse JSON and URL-encoded data
 app.use(express.json());
@@ -123,6 +124,20 @@ app.get('/api/gallery-images', (req, res) => {
   fs.readdir(galleryDir, (err, files) => {
     if (err) return res.status(500).json({ error: 'Unable to read gallery directory' });
     const images = files.filter(file => file.match(/\.(jpg|jpeg|png|webp)$/i));
+    res.json(images);
+  });
+});
+
+app.get('/api/gallery-images/:order', (req, res) => {
+  const order = req.params.order;
+  const folderPath = path.join(ordersDir, order);
+
+  fs.readdir(folderPath, (err, files) => {
+    if (err) {
+      console.error(`Could not read folder: ${folderPath}`, err.message);
+      return res.status(404).json({ error: 'Order folder not found' });
+    }
+    const images = files.filter(file => /\.(jpe?g|png|webp|gif)$/i.test(file));
     res.json(images);
   });
 });
