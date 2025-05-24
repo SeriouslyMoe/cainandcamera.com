@@ -47,12 +47,10 @@
       <a href="/" class="text-gray-700 hover:text-red-700 font-serif">HOME</a>
       <a href="/about/" class="text-gray-700 hover:text-red-700 font-serif">ABOUT</a>
       <a href="/services/" class="text-gray-700 hover:text-red-700 font-serif">SERVICES</a>
-      <a href="#" class="text-gray-700 hover:text-red-700 font-serif">BLOG</a>
-      <a href="#" class="text-gray-700 hover:text-red-700 font-serif">CAREERS</a>
-      <a href="#" class="text-gray-700 hover:text-red-700 font-serif">FAQ</a>
-      <button class="bg-white text-amber-400 border border-amber-400 px-4 py-2 hover:bg-black hover:text-amber-400 hover:border-red-700 transition duration-300">
-        CONTACT US
-      </button>
+      <a href="/gallery/" class="text-gray-700 hover:text-red-700 font-serif">GALLERY</a>
+      <a href="/news/" class="text-gray-700 hover:text-red-700 font-serif">NEWS</a>
+      <a href="/access/" class="text-gray-700 hover:text-red-700 font-serif">ACCESS</a>
+      <a href="/contact-us/" class="bg-white text-amber-400 border border-amber-400 px-4 py-2 hover:bg-black hover:text-amber-400 hover:border-red-700 transition duration-300">CONTACT US</a>
     </nav>
   </div>
 
@@ -62,9 +60,9 @@
       <a href="/" class="block text-gray-700 hover:text-red-700">HOME</a>
       <a href="/about/" class="block text-gray-700 hover:text-red-700">ABOUT</a>
       <a href="/services/" class="block text-gray-700 hover:text-red-700">SERVICES</a>
-      <a href="#" class="block text-gray-700 hover:text-red-700">BLOG</a>
-      <a href="#" class="block text-gray-700 hover:text-red-700">CAREERS</a>
-      <a href="#" class="block text-gray-700 hover:text-red-700">FAQ</a>
+      <a href="/gallery/" class="block text-gray-700 hover:text-red-700">GALLERY</a>
+      <a href="/news/" class="block text-gray-700 hover:text-red-700">NEWS</a>
+      <a href="/access/" class="block text-gray-700 hover:text-red-700">ACCESS</a>
     </div>
   </div>
 </header>
@@ -151,20 +149,22 @@
         </div>
         <div>
           <label class="inline-flex items-center">
-            <input type="checkbox" class="form-checkbox">
-            <span class="ml-2 text-gray-700">I agree to the <a href="/privacy-policy" class="underline hover:text-blue-500">Privacy Policy</a>.</span>
+            <input type="checkbox" id="agreePolicy" class="form-checkbox">
+            <span class="ml-2 text-gray-700">I agree to the <a href="/privacy-policy/" class="underline hover:text-blue-500">Privacy Policy</a>.</span>
           </label>
         </div>
         <div>
-          <button id="actionButton" type="button" class="w-full bg-white text-amber-400 border border-amber-400 px-4 py-2 hover:bg-black hover:text-amber-400 hover:border-red-700 transition duration-300">
-            Confirm Order
-          </button>
+          <button id="actionButton" type="button" disabled
+          class="w-full bg-white text-amber-400 border border-amber-400 px-4 py-2 opacity-50 cursor-not-allowed
+                 hover:bg-black hover:text-amber-400 hover:border-red-700 transition duration-300">
+          Confirm Order
+          </button>        
         </div>
       </form>
     </div>
     <!-- Cart Section (Mobile: first; Desktop: right) -->
     <div class="order-1 md:order-2 md:w-1/2">
-      <div class="bg-gray-200 p-6 rounded-sm">
+      <div class="bg-gray-100 p-6 rounded-sm shadow">
         <h2 class="text-2xl font-medium font-serif mb-4 text-center md:text-left">Your Cart</h2>
         <!-- Hidden cart count element for compatibility with cart.js -->
         <div id="cart-count" class="hidden"></div>
@@ -213,6 +213,21 @@
       billingInfo.style.display = 'none';
     } else {
       billingInfo.style.display = 'block';
+    }
+  });
+</script>
+
+<script>
+  const checkbox = document.getElementById('agreePolicy');
+  const submitButton = document.getElementById('actionButton');
+
+  checkbox.addEventListener('change', function () {
+    if (checkbox.checked) {
+      submitButton.disabled = false;
+      submitButton.classList.remove('opacity-50', 'cursor-not-allowed');
+    } else {
+      submitButton.disabled = true;
+      submitButton.classList.add('opacity-50', 'cursor-not-allowed');
     }
   });
 </script>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="/css/output.css" rel="stylesheet">
+  <style>
+    .gallery {
+      column-count: 3;
+      column-gap: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .gallery img:hover {
+      transform: scale(1.02);
+    }
+    @media (max-width: 1024px) {
+      .gallery {
+        column-count: 2;
+      }
+    }
+    @media (max-width: 640px) {
+      .gallery {
+        column-count: 1;
+      }
+    }
+  </style>
+</head>
+<body class="bg-white font-sans">
+  <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo and Company Name -->
+      <div class="flex items-center">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADJElEQVR4nO2azU4UQRDHf3hw9aDBRNGbPIyBmGgk2QvCMxgIb4F4YN1V1+hTqBvlBcQQz7osnAQvRj2DgG06qUk643x0dfesH6GSSvZjprt/+6/qru5ZOLX/1y4Bc8AaMACGwHfgUNy+/ijf2WvuAJP8JdYCFoEN4BgwSrf3vAYWpK2x23lgBfgcMPjMd4ET5/0+sAycGxfETWA3AiBza1MFn+8As00C2F/qsdOhzYE20I8AoeL7XhPhdhV4n+uoC0yI9xsAMcCWqJbEpkXuoo4eRsD4gBhgJGOIsisSQlUdPXVgeg2AGMnJazE5kQ+nMu8EKKMBMRJmQTnzRBkqWmW0IEbyUj3FapNXq0wIiAFmfCGsfNuBIEYAfJQJBdnxXTRXIiA0ymhBus7Es+Sjxn4CEB9lNCB9aact7/fqEn8xEYSPMr4gHacNdwK6WwWykRikShkfkH6FqnY7ULqfOJaKNFlZkDNXmTqQTokSmR8BF4s6mZML3jYE4cL0akD6njPfraIOHiQMIx+YMpCOYi26X9T4IBLiGXBGrU+YEkb8RVGDozEoUQUSUq/ZdeU3+zZmJVwQV4lHir6/FDV4GKFEqBoEKmHED1KAuBB2MKEWs8s8iA2tLJwyCBMJogknUxda24FKZJ+HQoQeXhg58AuafouUCAWJUcJUTb9rgUrkQSbGoIQRX60qUbRK5EGeR07HPrZZVaJMlpzf1imRB3HvacKmpLD9UVY0WnsToEQRiHGUsfeuJwgjk/NXVbQLAUqUgYS0YRQ+77vVbSsHUATSlDJ7wNm6GFx2CrKuovEykCaUuVcHkalSd0yqBUmpzEhz4jjbAEgKZX4CN1BarwGQvDJamHUCrCUHx6lBQpV555PgZXZZkS8aEK0yu/KwKcqmPbfBWpC8MvahUdE1tiq/TsKyYKsBkDxMtyCc7MOmpNaqWVdCQTIYuwAPndmpE5MTPjZTEmpTESCuD0Om2Bh1lqRUyAZw4pTXIf5JVuw/8g+IlpyKD+QsVjv4I6li55sOI43ZvcFtOcZ8Kfvpr86fauzrD7I9XZVN0QVVD6fGv2O/AECk0UkivM8FAAAAAElFTkSuQmCC" alt="Logo" class="h-8">
+        <a href="../" class="ml-4 text-2xl font-bold font-serif">Cairn & Camera</span>
+      </div>
+  
+      <!-- Mobile Menu Button (Dropdown Icon) -->
+      <div class="flex items-center md:hidden">
+        <!-- Mail Icon for Contact Us -->
+        <a href="/contact-us/" class="text-gray-700 hover:text-amber-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </a>
+        <!-- Dropdown Icon (Hamburger Menu) -->
+        <button id="mobile-menu-button" class="ml-4 text-gray-700 hover:text-blue-500 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+  
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-6">
+        <a href="/" class="text-gray-700 hover:text-red-700 font-serif">HOME</a>
+        <a href="/about/" class="text-gray-700 hover:text-red-700 font-serif">ABOUT</a>
+        <a href="/services/" class="text-gray-700 hover:text-red-700 font-serif">SERVICES</a>
+        <a href="/gallery/" class="text-gray-700 hover:text-red-700 font-serif">GALLERY</a>
+        <a href="/news/" class="text-gray-700 hover:text-red-700 font-serif">NEWS</a>
+        <a href="/access/" class="text-gray-700 hover:text-red-700 font-serif">ACCESS</a>
+        <a href="/contact-us/" class="bg-white text-amber-400 border border-amber-400 px-4 py-2 hover:bg-black hover:text-amber-400 hover:border-red-700 transition duration-300">CONTACT US</a>
+      </nav>
+    </div>
+  
+    <!-- Mobile Navigation Links (Dropdown) -->
+    <div id="mobile-menu" class="md:hidden bg-white transform transition-all duration-300 ease-in-out max-h-0 overflow-hidden">
+      <div class="px-6 py-4 space-y-4">
+        <a href="/" class="block text-gray-700 hover:text-red-700">HOME</a>
+        <a href="/about/" class="block text-gray-700 hover:text-red-700">ABOUT</a>
+        <a href="/services/" class="block text-gray-700 hover:text-red-700">SERVICES</a>
+        <a href="/gallery/" class="block text-gray-700 hover:text-red-700">GALLERY</a>
+        <a href="/news/" class="block text-gray-700 hover:text-red-700">NEWS</a>
+        <a href="/access/" class="block text-gray-700 hover:text-red-700">ACCESS</a>
+      </div>
+    </div>
+  </header>
+  
+  <main class="py-24 container mx-auto px-6">
+    <h1 class="text-4xl font-medium font-serif text-center mb-8">GALLERY</h1>
+    <div id="gallery" class="gallery"></div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center hidden z-50">
+      <button id="prevBtn" class="absolute left-4 text-white text-4xl">&#10094;</button>
+      <img id="lightboxImg" class="max-w-full max-h-[80vh] rounded shadow" />
+      <button id="nextBtn" class="absolute right-4 text-white text-4xl">&#10095;</button>
+      <button id="closeBtn" class="absolute top-4 right-4 text-white text-2xl">&times;</button>
+    </div>
+  </main>
+
+  <script>
+    const gallery = document.getElementById('gallery');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const closeBtn = document.getElementById('closeBtn');
+  
+    let images = [];
+    let currentIndex = 0;
+  
+    // Fetch images from backend API
+    fetch('/api/gallery-images')
+      .then(res => res.json())
+      .then(data => {
+        images = data;
+        images.forEach((file, index) => {
+          const src = `/images/dynamic/${file}`;
+          const img = document.createElement('img');
+          img.src = src;
+          img.alt = `Gallery Image ${index + 1}`;
+          img.addEventListener('click', () => openLightbox(index));
+          gallery.appendChild(img);
+        });
+      });
+  
+    function openLightbox(index) {
+      if (!images.length) return;
+      currentIndex = index;
+      updateLightbox();
+      lightbox.classList.remove('hidden');
+    }
+  
+    function updateLightbox() {
+      lightboxImg.src = `/images/dynamic/${images[currentIndex]}`;
+    }
+  
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateLightbox();
+    }
+  
+    function showNext() {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateLightbox();
+    }
+  
+    function closeLightbox() {
+      lightbox.classList.add('hidden');
+      lightboxImg.src = ''; // clear image to avoid flashing old one next time
+    }
+  
+    prevBtn.addEventListener('click', showPrev);
+    nextBtn.addEventListener('click', showNext);
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+  </script>  
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="/css/output.css" rel="stylesheet">
+  <title>Checkout - Cairn & Camera</title>
+  <style>
+    /* Initially hidden objects */
+    #overlay {
+      display: none;
+    }
+  </style>
+</head>
+<body class="font-sans bg-white">
+
+<!-- Navigation Header -->
+<header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Logo and Company Name -->
+    <div class="flex items-center">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADJElEQVR4nO2azU4UQRDHf3hw9aDBRNGbPIyBmGgk2QvCMxgIb4F4YN1V1+hTqBvlBcQQz7osnAQvRj2DgG06qUk643x0dfesH6GSSvZjprt/+6/qru5ZOLX/1y4Bc8AaMACGwHfgUNy+/ijf2WvuAJP8JdYCFoEN4BgwSrf3vAYWpK2x23lgBfgcMPjMd4ET5/0+sAycGxfETWA3AiBza1MFn+8As00C2F/qsdOhzYE20I8AoeL7XhPhdhV4n+uoC0yI9xsAMcCWqJbEpkXuoo4eRsD4gBhgJGOIsisSQlUdPXVgeg2AGMnJazE5kQ+nMu8EKKMBMRJmQTnzRBkqWmW0IEbyUj3FapNXq0wIiAFmfCGsfNuBIEYAfJQJBdnxXTRXIiA0ymhBus7Es+Sjxn4CEB9lNCB9aact7/fqEn8xEYSPMr4gHacNdwK6WwWykRikShkfkH6FqnY7ULqfOJaKNFlZkDNXmTqQTokSmR8BF4s6mZML3jYE4cL0akD6njPfraIOHiQMIx+YMpCOYi26X9T4IBLiGXBGrU+YEkb8RVGDozEoUQUSUq/ZdeU3+zZmJVwQV4lHir6/FDV4GKFEqBoEKmHED1KAuBB2MKEWs8s8iA2tLJwyCBMJogknUxda24FKZJ+HQoQeXhg58AuafouUCAWJUcJUTb9rgUrkQSbGoIQRX60qUbRK5EGeR07HPrZZVaJMlpzf1imRB3HvacKmpLD9UVY0WnsToEQRiHGUsfeuJwgjk/NXVbQLAUqUgYS0YRQ+77vVbSsHUATSlDJ7wNm6GFx2CrKuovEykCaUuVcHkalSd0yqBUmpzEhz4jjbAEgKZX4CN1BarwGQvDJamHUCrCUHx6lBQpV555PgZXZZkS8aEK0yu/KwKcqmPbfBWpC8MvahUdE1tiq/TsKyYKsBkDxMtyCc7MOmpNaqWVdCQTIYuwAPndmpE5MTPjZTEmpTESCuD0Om2Bh1lqRUyAZw4pTXIf5JVuw/8g+IlpyKD+QsVjv4I6li55sOI43ZvcFtOcZ8Kfvpr86fauzrD7I9XZVN0QVVD6fGv2O/AECk0UkivM8FAAAAAElFTkSuQmCC" alt="Logo" class="h-8">
+      <a href="../" class="ml-4 text-2xl font-bold font-serif">Cairn & Camera</span>
+    </div>
+
+    <!-- Mobile Menu Button (Dropdown Icon) -->
+    <div class="flex items-center md:hidden">
+      <!-- Mail Icon for Contact Us -->
+      <a href="#" class="text-gray-700 hover:text-amber-400">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      </a>
+      <!-- Dropdown Icon (Hamburger Menu) -->
+      <button id="mobile-menu-button" class="ml-4 text-gray-700 hover:text-blue-500 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden md:flex items-center space-x-6">
+      <a href="/" class="text-gray-700 hover:text-red-700 font-serif">HOME</a>
+      <a href="/about/" class="text-gray-700 hover:text-red-700 font-serif">ABOUT</a>
+      <a href="/services/" class="text-gray-700 hover:text-red-700 font-serif">SERVICES</a>
+      <a href="/gallery/" class="text-gray-700 hover:text-red-700 font-serif">GALLERY</a>
+      <a href="/news/" class="text-gray-700 hover:text-red-700 font-serif">NEWS</a>
+      <a href="/access/" class="text-gray-700 hover:text-red-700 font-serif">ACCESS</a>
+      <a href="/contact-us/" class="bg-white text-amber-400 border border-amber-400 px-4 py-2 hover:bg-black hover:text-amber-400 hover:border-red-700 transition duration-300">CONTACT US</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Navigation Links (Dropdown) -->
+  <div id="mobile-menu" class="md:hidden bg-white transform transition-all duration-300 ease-in-out max-h-0 overflow-hidden">
+    <div class="px-6 py-4 space-y-4">
+      <a href="/" class="block text-gray-700 hover:text-red-700">HOME</a>
+      <a href="/about/" class="block text-gray-700 hover:text-red-700">ABOUT</a>
+      <a href="/services/" class="block text-gray-700 hover:text-red-700">SERVICES</a>
+      <a href="/gallery/" class="block text-gray-700 hover:text-red-700">GALLERY</a>
+      <a href="/news/" class="block text-gray-700 hover:text-red-700">NEWS</a>
+      <a href="/access/" class="block text-gray-700 hover:text-red-700">ACCESS</a>
+    </div>
+  </div>
+</header>
+
+<main class="container mx-auto py-24 px-6">
+  <h1 class="text-4xl font-medium font-serif text-center mb-10">Upload & Touch-Up Request</h1>
+  <div class="pb-10 space-y-6">
+    <p class="md:w-1/2 mx-auto text-lg text-justify text-gray-700">
+      Use the tool below for basic photo retouching. If you need additional edits or refinements, 
+      feel free to submit the form—we're happy to make further adjustments at no extra cost. 
+      Please allow our team sufficient time to process your request with care.
+    </p>
+  </div>
+  <div class="flex flex-col md:flex-row gap-8 items-start">
+    <!-- Left Side: Upload and Filter -->
+    <div class="md:w-2/3 space-y-8">
+      <div class="bg-gray-100 p-6 rounded shadow">
+        <h2 class="text-2xl font-medium font-serif mb-4">Upload Image</h2>
+        <input type="file" accept="image/*" id="imageInput" class="mb-4 w-full">
+        <img id="imagePreview" src="" alt="Preview" class="w-full rounded hidden">
+      </div>
+
+      <div class="bg-gray-100 p-6 rounded shadow">
+        <h2 class="text-2xl font-medium font-serif mb-4">Choose Filter</h2>
+        <select id="filterSelect" class="block w-full border border-gray-300 p-2 mb-4">
+          <option value="none">None</option>
+          <option value="grayscale(100%)">Grayscale</option>
+          <option value="sepia(100%)">Sepia</option>
+          <option value="contrast(150%)">High Contrast</option>
+          <option value="brightness(120%)">Brighter</option>
+          <option value="saturate(200%)">Saturated</option>
+          <option value="invert(100%)">Invert</option>
+        </select>
+        <button onclick="applyFilter()" class="bg-amber-400 text-white border border-amber-400 px-4 py-2 hover:bg-black hover:text-amber-400 hover:border-red-700 transition duration-300">Apply Filter</button>
+      </div>
+    </div>
+
+    <!-- Right Side: Touch-Up Form -->
+    <div class="md:w-1/3 bg-gray-100 p-6 rounded shadow">
+      <h2 class="text-2xl font-medium font-serif mb-4 text-center md:text-left">Touch-Up Request</h2>
+      <form class="space-y-4" onsubmit="return false;">
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Name</label>
+          <input type="text" placeholder="Your Name" class="mt-1 block w-full border border-gray-300 p-2" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" placeholder="your@email.com" class="mt-1 block w-full border border-gray-300 p-2" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Touch-Up Description</label>
+          <textarea rows="5" placeholder="Describe what you'd like touched up..." class="mt-1 block w-full border border-gray-300 p-2"></textarea>
+        </div>
+        <button id="actionButton" type="button" class="w-full bg-amber-400 text-white border border-amber-400 px-4 py-2 hover:bg-black hover:text-amber-400 hover:border-red-700 transition duration-300">
+          Submit Request
+        </button>
+      </form>
+    </div>
+  </div>
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <div class="bg-white p-8 rounded-md shadow-lg text-center">
+      <h2 class="text-xl font-bold font-serif mb-4">Order Confirmed</h2>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+      <p class="text-gray-700">You will be redirected shortly...</p>
+    </div>
+  </div>
+</main>
+<script>
+  const imageInput = document.getElementById('imageInput');
+  const imagePreview = document.getElementById('imagePreview');
+  const filterSelect = document.getElementById('filterSelect');
+
+  imageInput.addEventListener('change', function () {
+    const file = imageInput.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        imagePreview.src = e.target.result;
+        imagePreview.classList.remove('hidden');
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  function applyFilter() {
+    const selectedFilter = filterSelect.value;
+    imagePreview.style.filter = selectedFilter;
+  }
+</script>
+<script>
+  document.getElementById('actionButton').addEventListener('click', function() {
+    // Show the overlay to dim the page and display the floating message
+    const overlay = document.getElementById('overlay');
+    overlay.style.display = 'flex';
+
+    // After 5 seconds, redirect to another page (change URL as needed)
+    setTimeout(function() {
+      window.location.href = '/';
+    }, 5000);
+  });
+</script>
+</body>
+</html>

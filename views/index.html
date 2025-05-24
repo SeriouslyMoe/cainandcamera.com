@@ -41,9 +41,9 @@
         <a href="#" class="text-gray-700 hover:text-red-700 font-serif">HOME</a>
         <a href="/about/" class="text-gray-700 hover:text-red-700 font-serif">ABOUT</a>
         <a href="/services/" class="text-gray-700 hover:text-red-700 font-serif">SERVICES</a>
-        <a href="#" class="text-gray-700 hover:text-red-700 font-serif">CAREERS</a>
-        <a href="#" class="text-gray-700 hover:text-red-700 font-serif">NEWS</a>
-        <a href="#" class="text-gray-700 hover:text-red-700 font-serif">FAQ</a>
+        <a href="/gallery/" class="text-gray-700 hover:text-red-700 font-serif">GALLERY</a>
+        <a href="/news/" class="text-gray-700 hover:text-red-700 font-serif">NEWS</a>
+        <a href="/access/" class="text-gray-700 hover:text-red-700 font-serif">ACCESS</a>
         <a href="/contact-us/" class="bg-white text-amber-400 border border-amber-400 px-4 py-2 hover:bg-black hover:text-amber-400 hover:border-red-700 transition duration-300">CONTACT US</a>
       </nav>
     </div>
@@ -51,12 +51,12 @@
     <!-- Mobile Navigation Links (Dropdown) -->
     <div id="mobile-menu" class="md:hidden bg-white transform transition-all duration-300 ease-in-out max-h-0 overflow-hidden">
       <div class="px-6 py-4 space-y-4">
-        <a href="#" class="block text-gray-700 hover:text-red-700">HOME</a>
+        <a href="/" class="block text-gray-700 hover:text-red-700">HOME</a>
         <a href="/about/" class="block text-gray-700 hover:text-red-700">ABOUT</a>
         <a href="/services/" class="block text-gray-700 hover:text-red-700">SERVICES</a>
-        <a href="#" class="block text-gray-700 hover:text-red-700">CAREERS</a>
-        <a href="#" class="block text-gray-700 hover:text-red-700">NEWS</a>
-        <a href="#" class="block text-gray-700 hover:text-red-700">FAQ</a>
+        <a href="/gallery/" class="block text-gray-700 hover:text-red-700">GALLERY</a>
+        <a href="/news/" class="block text-gray-700 hover:text-red-700">NEWS</a>
+        <a href="/access/" class="block text-gray-700 hover:text-red-700">ACCESS</a>
       </div>
     </div>
   </header>
@@ -97,7 +97,7 @@
   </a>
 </section>
 
-  <!-- About and Blog Section -->
+  <!-- About and News Section -->
   <section class="container mx-auto px-6 mt-12">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <!-- About Section -->
@@ -112,7 +112,7 @@
           </a>
         </div>
       </div>
-      <!-- Blog Section -->
+      <!-- News Section -->
       <div>
         <div class="space-y-6">
           <!-- Blog Post 1 -->
@@ -224,10 +224,10 @@
   <!-- Contact and Share Section -->
   <section class="container mx-auto p-6 mt-12">
     <div class="flex justify-between items-center">
-      <button class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Contact Us</button>
+      <a href="/contact-us/" class="bg-white text-amber-400 border border-amber-400 px-4 py-2 hover:bg-black hover:text-amber-400 hover:border-red-700 transition duration-300">Contact Us</a>
       <div class="flex space-x-4">
-        <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABJElEQVR4nO2ZTUoDQRBG31LiDbIQ4g3EY2RCQMHzSCTgTXIBN1locops3QVc6gxusigRsjEk0z2TGfuH70Ftu+p1dTUzNAgh2jIF1kAFWOCogBUwaSrxHEHxdiLmTTphkUfhI7KOoFBzxJuPSBlBoeaILx8RSySchC7QJHJA6J02deSA/9jN35txBtwAl8AAGAEPwDKVjrwD1x3U4KRPiR1w6y6B6EUWPgWQgMhdLiJXR/LdAxvgu+FaQUUujuT7aLlWUJEu8zmRCBl3pA3DXEQmuYg85iLykovINkYRn+S9bZJJBHXEdLRq0IygGUEzUodmBM0IvcxImcAnyqePyCoBkdcu/9BCiozxZN7z7XVOPNGQYv96GsPjaLk/Tt6dEELwhx+snvc1Sojn9AAAAABJRU5ErkJggg==" alt="Facebook" class="h-8"></a>
-        <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACvElEQVR4nO2ZTWsUQRCGn0P04pLE+3oQs1nBi/h1EPVg9GziX1GTP6CoR2MOGvHjP4gRsxtJBH+Cq7nHk27EGIyXtaWgGoaB+ejpWbsX9oUX9jBVXe9OVXVNN4wxRhRoA0tAF/gM7AOmJoov8dkBFnWt2nEO2Kgx6LL8CFysQ8AhYAX4G0CEUcraj4GJqiKOAu8DCjApbmhMzm8iRCqZAn4ADrsIWYkgaJPBZZfCDlkTpoAS29kyQmJMKZOitOhctAMH+AZoKtcKnm3lCVkKLKSZiOVYwbN38oR0RkjIep6Q7RqC6QPPgRuaqkeU8nseeAHsZtiuqQDh24J1vuQJ2fMQ8Bu4C0xSjCngntpUXW8vb4GqTndSLfE68Ez/tf3EQLgKXEu1+h2PdTNRVYTN7Vlgq4TNZqLrND3EZKJKOtk3cSUn97Nq6bLangcOQgqRmrBvwkVEUsyM+ngQSkhfi5aS6ZRFmbAF0xX+jFqESIu1hW08Oae+XoYQIvsE2p18hTxVXwshhEhdoC3WV4i0ZkE7hJCG2vyqQYj4EDRGXchP9TU56qnVC5la82qzWoOQJ+rrZgghMsWis5OvkKvq61XoDXHTQ4R8WtsN8UcIIUZHccFx4JvniPKwgn1tQg50FEcHwL6D7XfgktpeCD00mtQYP1PydFLS6YTayNfg14prZ8J4iJFR3GJOx46e7jPCT9qdbGHbN1FVhBnWp66kxn0t2iJMa038Gdan7raHY8tdnWJlADypE0BDfy9oi3XtTsb18CH0cZBx4Ls8IYsRBGhK8laekFYEARrHWS8T3QiCND6njBangUEEwZoMDspeK6B3diZSPsIBE5Gm2Jbr1Rt68RjTpU+35Gab+WaWA1/FDTSdKl9PJ3EKeB1ARAc4wxDQ0puidT3CqePgwVJ89XTHvl10tTbGGPwf/APThWw4L8JxcwAAAABJRU5ErkJggg==" alt="Instagram" class="h-8"></a>
+        <a href="facebook.com"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABJElEQVR4nO2ZTUoDQRBG31LiDbIQ4g3EY2RCQMHzSCTgTXIBN1locops3QVc6gxusigRsjEk0z2TGfuH70Ftu+p1dTUzNAgh2jIF1kAFWOCogBUwaSrxHEHxdiLmTTphkUfhI7KOoFBzxJuPSBlBoeaILx8RSySchC7QJHJA6J02deSA/9jN35txBtwAl8AAGAEPwDKVjrwD1x3U4KRPiR1w6y6B6EUWPgWQgMhdLiJXR/LdAxvgu+FaQUUujuT7aLlWUJEu8zmRCBl3pA3DXEQmuYg85iLykovINkYRn+S9bZJJBHXEdLRq0IygGUEzUodmBM0IvcxImcAnyqePyCoBkdcu/9BCiozxZN7z7XVOPNGQYv96GsPjaLk/Tt6dEELwhx+snvc1Sojn9AAAAABJRU5ErkJggg==" alt="Facebook" class="h-8"></a>
+        <a href="instagram.com"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACvElEQVR4nO2ZTWsUQRCGn0P04pLE+3oQs1nBi/h1EPVg9GziX1GTP6CoR2MOGvHjP4gRsxtJBH+Cq7nHk27EGIyXtaWgGoaB+ejpWbsX9oUX9jBVXe9OVXVNN4wxRhRoA0tAF/gM7AOmJoov8dkBFnWt2nEO2Kgx6LL8CFysQ8AhYAX4G0CEUcraj4GJqiKOAu8DCjApbmhMzm8iRCqZAn4ADrsIWYkgaJPBZZfCDlkTpoAS29kyQmJMKZOitOhctAMH+AZoKtcKnm3lCVkKLKSZiOVYwbN38oR0RkjIep6Q7RqC6QPPgRuaqkeU8nseeAHsZtiuqQDh24J1vuQJ2fMQ8Bu4C0xSjCngntpUXW8vb4GqTndSLfE68Ez/tf3EQLgKXEu1+h2PdTNRVYTN7Vlgq4TNZqLrND3EZKJKOtk3cSUn97Nq6bLangcOQgqRmrBvwkVEUsyM+ngQSkhfi5aS6ZRFmbAF0xX+jFqESIu1hW08Oae+XoYQIvsE2p18hTxVXwshhEhdoC3WV4i0ZkE7hJCG2vyqQYj4EDRGXchP9TU56qnVC5la82qzWoOQJ+rrZgghMsWis5OvkKvq61XoDXHTQ4R8WtsN8UcIIUZHccFx4JvniPKwgn1tQg50FEcHwL6D7XfgktpeCD00mtQYP1PydFLS6YTayNfg14prZ8J4iJFR3GJOx46e7jPCT9qdbGHbN1FVhBnWp66kxn0t2iJMa038Gdan7raHY8tdnWJlADypE0BDfy9oi3XtTsb18CH0cZBx4Ls8IYsRBGhK8laekFYEARrHWS8T3QiCND6njBangUEEwZoMDspeK6B3diZSPsIBE5Gm2Jbr1Rt68RjTpU+35Gab+WaWA1/FDTSdKl9PJ3EKeB1ARAc4wxDQ0puidT3CqePgwVJ89XTHvl10tTbGGPwf/APThWw4L8JxcwAAAABJRU5ErkJggg==" alt="Instagram" class="h-8"></a>
       </div>
     </div>
   </section>
