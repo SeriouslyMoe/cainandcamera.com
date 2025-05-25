@@ -9,7 +9,7 @@
   <link href="/css/output.css" rel="stylesheet">
   <title>News - Cairn & Camera</title>
 </head>
-<body class="min-h-screen flex flex-col font-sans bg-white">
+<body class="bg-white font-sans">
   <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
       <!-- Logo and Company Name -->
@@ -58,76 +58,35 @@
       </div>
     </div>
   </header>
-  <main class="py-24 container flex-grow mx-auto px-6">
+  <main class="container mx-auto py-24 px-6">
     <h1 class="text-4xl font-medium font-serif text-center mb-10">NEWS</h1>
-
-    <!-- Blog Post List -->
-    <div class="space-y-10 max-w-4xl mx-auto">
-      <!-- Blog Post Item -->
-      <div class="flex flex-col md:flex-row gap-6 items-start">
-        <img src="/images/blog1.jpg" alt="Post 1" class="w-32 h-32 object-cover rounded shadow">
-        <div class="flex-1 space-y-2">
-          <p class="text-sm text-gray-500">May 8, 2025</p>
-          <h2 class="text-2xl font-semibold text-gray-800">[Friday, 5/9] Notice of Temporary Closure</h2>
-          <p class="text-gray-700">Thank you for your continued interest in Cairn & Camera. Please be advised that our <a href="/news/20250508" class="text-amber-500 hover:underline">Read More...</a></p>
-        </div>
-      </div>
-
-      <!-- Blog Post Item -->
-      <div class="flex flex-col md:flex-row gap-6 items-start">
-        <img src="/images/blog2.jpg" alt="Post 2" class="w-32 h-32 object-cover rounded shadow">
-        <div class="flex-1 space-y-2">
-          <p class="text-sm text-gray-500">April 20, 2025</p>
-          <h2 class="text-2xl font-semibold text-gray-800">[Monday 4/21] Notice of Temporary Closure</h2>
-          <p class="text-gray-700">Thank you for your continued interest in Cairn & Camera. Please be advised that our <a href="/news/20250420" class="text-amber-500 hover:underline">Read More...</a></p>
-        </div>
-      </div>
-
-      <!-- Blog Post Item -->
-      <div class="flex flex-col md:flex-row gap-6 items-start">
-        <img src="/images/blog3.jpg" alt="Post 3" class="w-32 h-32 object-cover rounded shadow">
-        <div class="flex-1 space-y-2">
-          <p class="text-sm text-gray-500">December 25, 2024</p>
-          <h2 class="text-2xl font-semibold text-gray-800">Year-End and New Year Holiday Hours</h2>
-          <p class="text-gray-700">Thank you for your continued support of Cairn & Camera. Please be advised that our <a href="/news/20241225" class="text-amber-500 hover:underline">Read More...</a></p>
-        </div>
-      </div>
-    </div>
-    <!-- Floating Cart Button -->
-    <div class="fixed bottom-4 right-4 z-50">
-      <button id="cart-button" class="bg-red-700 text-white px-6 py-3 rounded-full shadow-lg hover:bg-amber-400 transition duration-300 flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-        <span id="cart-count" class="ml-2">0</span>
-      </button>
-    </div>
-
-    <!-- Cart Modal -->
-    <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
-      <div class="bg-white w-96 h-full p-6 overflow-y-auto ml-auto">
-        <div class="flex justify-between items-center mb-6">
-          <h2 class="text-xl font-bold font-serif">Your Cart</h2>
-          <button id="close-cart-button" class="text-gray-500 hover:text-gray-700">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-        <div id="cart-items" class="space-y-4">
-          <!-- Cart items will be dynamically added here -->
-        </div>
-        <div class="mt-6">
-          <p class="text-lg font-bold">Total: $<span id="cart-total">0.00</span></p>
-          <a href="/checkout" class="mt-4 w-full bg-white text-amber-400 border border-amber-400 px-4 py-2 hover:bg-black hover:text-amber-400 hover:border-red-700 transition duration-300 text-center block">
-            Checkout
-          </a>
-          <p class="text-xs italic text-gray-600 mt-2 text-center">Click the red "x" button twice to remove a listing.</p>
-        </div>
-      </div>
-    </div>
+      <h2 class="text-2xl font-bold font-serif mb-4">Year-End and New Year Holiday Hours</h2>
+      <p class="mb-4">Thank you for your continued support of Cairn & Camera.</p>
+      <p class="mb-4">Please be advised that our business hours will be adjusted during the 
+        year-end and New Year holidays as outlined below. We will resume regular operations 
+        on <b>Saturday, January 6</b>.
+      </p>
+      <p class="mb-4">We appreciate your understanding and apologize for any inconvenience 
+        this may cause.
+      </p>
+      <p class="mb-4">Holiday Schedule:</p>
+      <ul class="list-disc list-inside mb-4">
+        <li><b>December 26, 2024</b> — Open: 9:00 a.m. – 12:00 p.m.</li>
+        <li><b>December 27, 2024</b> — Open: 9:00 a.m. – 7:00 p.m.</li>
+        <li><b>December 28, 2024</b> — Open: 10:00 a.m. – 12:00 p.m.</li>
+        <li><b>December 29–31, 2024</b> — Closed</li>
+        <li><b>January 1–2, 2025</b> — Closed</li>
+        <li><b>January 3, 2025</b> — Open: 10:00 a.m. – 4:00 p.m.</li>
+        <li><b>January 4, 2025</b> — Open: 10:00 a.m. – 4:00 p.m.</li>
+        <li><b>January 5, 2025</b> — Open: 10:00 a.m. – 4:00 p.m.</li>
+        <li><b>January 6, 2025</b> — Resume regular hours: 9:00 a.m. – 7:00 p.m.</li>
+      </ul>
+      <p class="mb-4">If you need assistance during this period, feel free to reach out via 
+        our contact form, and we will respond as soon as possible.
+      </p>
+      <p class="font-bold">— The Cairn & Camera Team</p>
   </main>
-  <footer class="hidden md:block bg-white shadow">
+  <footer class="hidden md:block w-full bg-white shadow">
     <div class="container mx-auto px-6 py-6 flex flex-col items-center">
       <!-- Navigation Links -->
       <nav class="grid grid-cols-2 gap-3 mb-4">
@@ -150,6 +109,5 @@
       <p class="text-xs text-gray-500">&copy; 2025 Cairn & Camera. All rights reserved.</p>
     </div>
   </footer>
-  <script src="/js/cart.js"></script>
 </body>
 </html>

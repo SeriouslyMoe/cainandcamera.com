@@ -9,7 +9,7 @@
   <link href="/css/output.css" rel="stylesheet">
   <title>Cairn & Camera</title>
 </head>
-<body class="font-sans bg-white">
+<body class="min-h-screen flex flex-col font-sans bg-white">
 
 <!-- Navigation Header -->
 <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
@@ -61,6 +61,7 @@
     </div>
   </header>
 
+<main class="flex-grow">
 <!-- Gallery Section -->
 <section class="relative w-full h-[40vh] md:h-[80vh] overflow-hidden group mt-16">
   <!-- Gallery Container -->
@@ -119,30 +120,30 @@
           <div class="flex items-center space-x-4">
             <img src="/images/blog1.jpg" alt="Blog Post 1" class="w-24 h-24 object-cover rounded-lg">
             <div>
-              <span class="text-sm text-gray-500">October 10, 2023</span>
-              <h3 class="text-lg font-semibold">Blog Post Title 1</h3>
-              <p class="text-sm text-gray-600">A brief description of the blog post content.</p>
-              <a href="#" class="mt-2 inline-block text-amber-400 hover:underline">Read More →</a>
+              <span class="text-sm text-gray-500">May 8, 2025</span>
+              <h3 class="text-lg font-semibold">[Friday, 5/9] Notice of Temporary Closure</h3>
+              <p class="text-sm text-gray-600">Please be advised that our studio will be temporarily ...</p>
+              <a href="/news/20250508" class="mt-2 inline-block text-amber-400 hover:underline">Read More →</a>
             </div>
           </div>
           <!-- Blog Post 2 -->
           <div class="flex items-center space-x-4">
             <img src="/images/blog2.jpg" alt="Blog Post 2" class="w-24 h-24 object-cover rounded-lg">
             <div>
-              <span class="text-sm text-gray-500">October 5, 2023</span>
-              <h3 class="text-lg font-semibold">Blog Post Title 2</h3>
-              <p class="text-sm text-gray-600">A brief description of the blog post content.</p>
-              <a href="#" class="mt-2 inline-block text-amber-400 hover:underline">Read More →</a>
+              <span class="text-sm text-gray-500">April 20, 2025</span>
+              <h3 class="text-lg font-semibold">[Monday 4/21] Notice of Temporary Closure</h3>
+              <p class="text-sm text-gray-600">Please be advised that our studio will be temporarily ...</p>
+              <a href="/news/20250420" class="mt-2 inline-block text-amber-400 hover:underline">Read More →</a>
             </div>
           </div>
           <!-- Blog Post 1 -->
           <div class="flex items-center space-x-4">
             <img src="/images/blog3.jpg" alt="Blog Post 3" class="w-24 h-24 object-cover rounded-lg">
             <div>
-              <span class="text-sm text-gray-500">October 1, 2023</span>
-              <h3 class="text-lg font-semibold">Blog Post Title 3</h3>
-              <p class="text-sm text-gray-600">A brief description of the blog post content.</p>
-              <a href="#" class="mt-2 inline-block text-amber-400 hover:underline">Read More →</a>
+              <span class="text-sm text-gray-500">December 25, 2024</span>
+              <h3 class="text-lg font-semibold">Year-End and New Year Holiday Hours</h3>
+              <p class="text-sm text-gray-600">Thank you for your continued support of Cairn & ...</p>
+              <a href="/news/20241225" class="mt-2 inline-block text-amber-400 hover:underline">Read More →</a>
             </div>
           </div>
           <!-- Repeat for Blog Post 2 and 3 -->
@@ -190,33 +191,45 @@
     <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       <!-- Plan 1 -->
       <div>
-        <img src="/images/plan1.jpg" alt="Plan 1" class="w-full h-auto rounded-lg">
-        <p class="mt-2 font-bold text-center">Wedding</p>
+        <a href="/services/">
+          <img src="/images/plan1.jpg" alt="Plan 1" class="w-full h-auto rounded-lg">
+          <p class="mt-2 font-bold text-center">Wedding</p>
+        </a>
       </div>
       <!-- Plan 2 -->
       <div>
-        <img src="/images/plan2.jpg" alt="Plan 2" class="w-full h-auto rounded-lg">
-        <p class="mt-2 font-bold text-center">Pet</p>
+        <a href="/services/">
+          <img src="/images/plan2.jpg" alt="Plan 2" class="w-full h-auto rounded-lg">
+          <p class="mt-2 font-bold text-center">Pet</p>
+        </a>
       </div>
       <!-- Plan 3 -->
       <div>
-        <img src="/images/plan3.jpg" alt="Plan 3" class="w-full h-auto rounded-lg">
-        <p class="mt-2 font-bold text-center">Outdoors</p>
+        <a href="/services/">
+          <img src="/images/plan3.jpg" alt="Plan 3" class="w-full h-auto rounded-lg">
+          <p class="mt-2 font-bold text-center">Outdoors</p>
+        </a>
       </div>
       <!-- Plan 4 -->
       <div>
-        <img src="/images/plan4.jpg" alt="Plan 4" class="w-full h-auto rounded-lg">
-        <p class="mt-2 font-bold text-center">Graduation</p>
+        <a href="/services/">
+          <img src="/images/plan4.jpg" alt="Plan 4" class="w-full h-auto rounded-lg">
+          <p class="mt-2 font-bold text-center">Graduation</p>
+        </a>
       </div>
       <!-- Plan 5 -->
       <div>
-        <img src="/images/plan5.jpg" alt="Plan 5" class="w-full h-auto rounded-lg">
-        <p class="mt-2 font-bold text-center">ID Photo</p>
+        <a href="/services/">
+          <img src="/images/plan5.jpg" alt="Plan 5" class="w-full h-auto rounded-lg">
+          <p class="mt-2 font-bold text-center">ID Photo</p>
+        </a>
       </div>
       <!-- Plan 6 -->
       <div>
-        <img src="/images/plan6.jpg" alt="Plan 6" class="w-full h-auto rounded-lg">
-        <p class="mt-2 font-bold text-center">Profile Picture</p>
+        <a href="/services/">
+          <img src="/images/plan6.jpg" alt="Plan 6" class="w-full h-auto rounded-lg">
+          <p class="mt-2 font-bold text-center">Profile Picture</p>
+        </a>
       </div>
     </div>
   </section>
@@ -226,8 +239,8 @@
     <div class="flex justify-between items-center">
       <a href="/contact-us/" class="bg-white text-amber-400 border border-amber-400 px-4 py-2 hover:bg-black hover:text-amber-400 hover:border-red-700 transition duration-300">Contact Us</a>
       <div class="flex space-x-4">
-        <a href="facebook.com"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABJElEQVR4nO2ZTUoDQRBG31LiDbIQ4g3EY2RCQMHzSCTgTXIBN1locops3QVc6gxusigRsjEk0z2TGfuH70Ftu+p1dTUzNAgh2jIF1kAFWOCogBUwaSrxHEHxdiLmTTphkUfhI7KOoFBzxJuPSBlBoeaILx8RSySchC7QJHJA6J02deSA/9jN35txBtwAl8AAGAEPwDKVjrwD1x3U4KRPiR1w6y6B6EUWPgWQgMhdLiJXR/LdAxvgu+FaQUUujuT7aLlWUJEu8zmRCBl3pA3DXEQmuYg85iLykovINkYRn+S9bZJJBHXEdLRq0IygGUEzUodmBM0IvcxImcAnyqePyCoBkdcu/9BCiozxZN7z7XVOPNGQYv96GsPjaLk/Tt6dEELwhx+snvc1Sojn9AAAAABJRU5ErkJggg==" alt="Facebook" class="h-8"></a>
-        <a href="instagram.com"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACvElEQVR4nO2ZTWsUQRCGn0P04pLE+3oQs1nBi/h1EPVg9GziX1GTP6CoR2MOGvHjP4gRsxtJBH+Cq7nHk27EGIyXtaWgGoaB+ejpWbsX9oUX9jBVXe9OVXVNN4wxRhRoA0tAF/gM7AOmJoov8dkBFnWt2nEO2Kgx6LL8CFysQ8AhYAX4G0CEUcraj4GJqiKOAu8DCjApbmhMzm8iRCqZAn4ADrsIWYkgaJPBZZfCDlkTpoAS29kyQmJMKZOitOhctAMH+AZoKtcKnm3lCVkKLKSZiOVYwbN38oR0RkjIep6Q7RqC6QPPgRuaqkeU8nseeAHsZtiuqQDh24J1vuQJ2fMQ8Bu4C0xSjCngntpUXW8vb4GqTndSLfE68Ez/tf3EQLgKXEu1+h2PdTNRVYTN7Vlgq4TNZqLrND3EZKJKOtk3cSUn97Nq6bLangcOQgqRmrBvwkVEUsyM+ngQSkhfi5aS6ZRFmbAF0xX+jFqESIu1hW08Oae+XoYQIvsE2p18hTxVXwshhEhdoC3WV4i0ZkE7hJCG2vyqQYj4EDRGXchP9TU56qnVC5la82qzWoOQJ+rrZgghMsWis5OvkKvq61XoDXHTQ4R8WtsN8UcIIUZHccFx4JvniPKwgn1tQg50FEcHwL6D7XfgktpeCD00mtQYP1PydFLS6YTayNfg14prZ8J4iJFR3GJOx46e7jPCT9qdbGHbN1FVhBnWp66kxn0t2iJMa038Gdan7raHY8tdnWJlADypE0BDfy9oi3XtTsb18CH0cZBx4Ls8IYsRBGhK8laekFYEARrHWS8T3QiCND6njBangUEEwZoMDspeK6B3diZSPsIBE5Gm2Jbr1Rt68RjTpU+35Gab+WaWA1/FDTSdKl9PJ3EKeB1ARAc4wxDQ0puidT3CqePgwVJ89XTHvl10tTbGGPwf/APThWw4L8JxcwAAAABJRU5ErkJggg==" alt="Instagram" class="h-8"></a>
+        <a href="https://www.facebook.com"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABJElEQVR4nO2ZTUoDQRBG31LiDbIQ4g3EY2RCQMHzSCTgTXIBN1locops3QVc6gxusigRsjEk0z2TGfuH70Ftu+p1dTUzNAgh2jIF1kAFWOCogBUwaSrxHEHxdiLmTTphkUfhI7KOoFBzxJuPSBlBoeaILx8RSySchC7QJHJA6J02deSA/9jN35txBtwAl8AAGAEPwDKVjrwD1x3U4KRPiR1w6y6B6EUWPgWQgMhdLiJXR/LdAxvgu+FaQUUujuT7aLlWUJEu8zmRCBl3pA3DXEQmuYg85iLykovINkYRn+S9bZJJBHXEdLRq0IygGUEzUodmBM0IvcxImcAnyqePyCoBkdcu/9BCiozxZN7z7XVOPNGQYv96GsPjaLk/Tt6dEELwhx+snvc1Sojn9AAAAABJRU5ErkJggg==" alt="Facebook" class="h-8"></a>
+        <a href="https://www.instagram.com"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACvElEQVR4nO2ZTWsUQRCGn0P04pLE+3oQs1nBi/h1EPVg9GziX1GTP6CoR2MOGvHjP4gRsxtJBH+Cq7nHk27EGIyXtaWgGoaB+ejpWbsX9oUX9jBVXe9OVXVNN4wxRhRoA0tAF/gM7AOmJoov8dkBFnWt2nEO2Kgx6LL8CFysQ8AhYAX4G0CEUcraj4GJqiKOAu8DCjApbmhMzm8iRCqZAn4ADrsIWYkgaJPBZZfCDlkTpoAS29kyQmJMKZOitOhctAMH+AZoKtcKnm3lCVkKLKSZiOVYwbN38oR0RkjIep6Q7RqC6QPPgRuaqkeU8nseeAHsZtiuqQDh24J1vuQJ2fMQ8Bu4C0xSjCngntpUXW8vb4GqTndSLfE68Ez/tf3EQLgKXEu1+h2PdTNRVYTN7Vlgq4TNZqLrND3EZKJKOtk3cSUn97Nq6bLangcOQgqRmrBvwkVEUsyM+ngQSkhfi5aS6ZRFmbAF0xX+jFqESIu1hW08Oae+XoYQIvsE2p18hTxVXwshhEhdoC3WV4i0ZkE7hJCG2vyqQYj4EDRGXchP9TU56qnVC5la82qzWoOQJ+rrZgghMsWis5OvkKvq61XoDXHTQ4R8WtsN8UcIIUZHccFx4JvniPKwgn1tQg50FEcHwL6D7XfgktpeCD00mtQYP1PydFLS6YTayNfg14prZ8J4iJFR3GJOx46e7jPCT9qdbGHbN1FVhBnWp66kxn0t2iJMa038Gdan7raHY8tdnWJlADypE0BDfy9oi3XtTsb18CH0cZBx4Ls8IYsRBGhK8laekFYEARrHWS8T3QiCND6njBangUEEwZoMDspeK6B3diZSPsIBE5Gm2Jbr1Rt68RjTpU+35Gab+WaWA1/FDTSdKl9PJ3EKeB1ARAc4wxDQ0puidT3CqePgwVJ89XTHvl10tTbGGPwf/APThWw4L8JxcwAAAABJRU5ErkJggg==" alt="Instagram" class="h-8"></a>
       </div>
     </div>
   </section>
@@ -265,6 +278,30 @@
     </div>
   </div>
 </div>
+</main>
+<footer class="hidden md:block w-full bg-white shadow">
+  <div class="container mx-auto px-6 py-6 flex flex-col items-center">
+    <!-- Navigation Links -->
+    <nav class="grid grid-cols-2 gap-3 mb-4">
+      <a href="/" class="text-right text-gray-700 hover:text-red-700 font-serif text-sm">HOME</a>
+      <a href="/about/" class="text-gray-700 hover:text-red-700 font-serif text-sm">ABOUT</a>
+      <a href="/services/" class="text-right text-gray-700 hover:text-red-700 font-serif text-sm">SERVICES</a>
+      <a href="/gallery/" class="text-gray-700 hover:text-red-700 font-serif text-sm">GALLERY</a>
+      <a href="/news/" class="text-right text-gray-700 hover:text-red-700 font-serif text-sm">NEWS</a>
+      <a href="/access/" class="text-gray-700 hover:text-red-700 font-serif text-sm">ACCESS</a>
+    </nav>
+
+    <div class="border-t border-gray-200 w-full max-w-xs mb-4"></div>
+
+    <nav class="grid grid-cols-2 gap-3 mb-4">
+      <a href="/services/crop/" class="text-right text-gray-700 hover:text-red-700 font-serif text-sm">CROP TOOL</a>
+      <a href="/services/retouch/" class="text-gray-700 hover:text-red-700 font-serif text-sm">RETOUCH</a>
+    </nav>
+
+    <!-- Copyright -->
+    <p class="text-xs text-gray-500">&copy; 2025 Cairn & Camera. All rights reserved.</p>
+  </div>
+</footer>
 
 <script>
   // Sliding Gallery Functionality
@@ -316,7 +353,5 @@
 
 <!-- Link to cart.js -->
 <script src="/js/cart.js"></script>
-</body>
-</html>
 </body>
 </html>

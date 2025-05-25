@@ -104,6 +104,18 @@ app.get('/news/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'news.html'));
 });
 
+// Dynamic news route: /news/:date
+app.get('/news/:date', (req, res) => {
+  const date = req.params.date;
+  if (!/^[0-9]{8}$/.test(date)) return res.status(400).send('Invalid post ID.');
+
+  const filePath = path.join(__dirname, 'public/news', `${date}.html`);
+  fs.access(filePath, fs.constants.F_OK, (err) => {
+    if (err) return res.status(404).send('Post not found.');
+    res.sendFile(filePath);
+  });
+});
+
 app.get('/privacy-policy/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'privacy.html'));
 });
